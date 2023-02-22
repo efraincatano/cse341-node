@@ -1,13 +1,11 @@
-const http = require("http");
+const express = require('express');
+const server = express();
 
-function website(req, res){
-    res.writeHead(200, {"Content-type": "text/plain"});
-    res.end("Efrain Cataño Pescador");
-}
+server.use((req, res) => {
+  res.send("Efrain Cataño Pescador");
+})
 
-let server = http.createServer(website);
-
-
-server.listen(8080, "https://efrain-w1-a1.onrender.com");
-
-console.log("Server listening on 8080");
+const PORT = process.env.PORT || 3000
+server.listen(PORT, () => {
+  console.log('Server listening on http://localhost:' + PORT)
+})

@@ -1,9 +1,15 @@
 {
+  "main": "server.js",
+  "engines": {
+    "node": "19.x"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
   "dependencies": {
     "express": "^4.18.2",
     "node": "^19.6.0"
-  },
-
-  "scripts": 
-  {"start": "node server.js"}
+  }
 }
+
+
