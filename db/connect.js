@@ -1,7 +1,6 @@
-//const dotenv = require('dotenv');
-//dotenv.config();
+const dotenv = require('dotenv');
+dotenv.config();
 const MongoClient = require('mongodb').MongoClient;
-MONGODB_URI="mongodb+srv://ecp97:sinsajo123@cluster0.0406lyt.mongodb.net/?retryWrites=true&w=majority";
 
 
 
@@ -12,7 +11,7 @@ const initDb = (callback) => {
     console.log('Database connection succesfully!');
     return callback(null, _db);
   }
-  MongoClient.connect(MONGODB_URI)
+  MongoClient.connect(process.env.MONGODB_URI)
     .then((client) => {
       _db = client;
       callback(null, _db);
@@ -33,3 +32,4 @@ module.exports = {
   initDb,
   getDb,
 };
+

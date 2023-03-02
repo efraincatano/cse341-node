@@ -4,4 +4,29 @@ GET http://localhost:3000/contacts
 ### 
 GET http://localhost:3000/contacts/63fac6ea6b95f174ec0a0a31
 
+### 
+POST http://localhost:3000/contacts HTTP/1.1 
+content-type: application/json
+
+{
+    "firstName":"Yuli", 
+    "lastName":"Pescador", 
+    "email":"yulipes@mail.com", 
+    "favoriteColor":"Purple", 
+    "birthday":"30 May"
+}
+
+### 
+PUT http://localhost:3000/contacts/6400044768bbf476ef44ae72 HTTP/1.1 
+content-type: application/json
+
+{
+    "firstName":"Yuli", 
+    "lastName":"Pescador", 
+    "email":"yulipes@mail.com", 
+    "favoriteColor":"Green", 
+    "birthday":"30 May"
+} 
+###
+DELETE http://localhost:3000/contacts/6400044768bbf476ef44ae72 HTTP/1.1
 
