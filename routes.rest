@@ -17,7 +17,7 @@ content-type: application/json
 }
 
 ### 
-PUT http://localhost:3000/contacts/6400044768bbf476ef44ae72 HTTP/1.1 
+PUT http://localhost:3000/contacts/640015adee013309532922bd HTTP/1.1 
 content-type: application/json
 
 {
@@ -28,5 +28,5 @@ content-type: application/json
     "birthday":"30 May"
 } 
 ###
-DELETE http://localhost:3000/contacts/6400044768bbf476ef44ae72 HTTP/1.1
+DELETE http://localhost:3000/contacts/640015adee013309532922bd HTTP/1.1
 
